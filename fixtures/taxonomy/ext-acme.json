@@ -1,0 +1,12 @@
+{
+  "version": "ext-acme-2026",
+  "namespace": "https://example.invalid/esg",
+  "issued": "2026-02-01",
+  "extends": ["base-2026"],
+  "concepts": {
+    "TotalWaste": {"ref": "Waste"},
+    "WaterWithdrawal": {"dimension": "volume", "datatype": "volumeItemType", "period_type": "duration"}
+  },
+  "aliases": {},
+  "units": {}
+}

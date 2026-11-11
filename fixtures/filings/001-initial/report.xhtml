@@ -1,0 +1,72 @@
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ix="http://www.xbrl.org/2013/inlineXBRL"
+      xmlns:xbrli="http://www.xbrl.org/2003/instance"
+      xmlns:xbrldi="http://www.xbrl.org/2006/xbrldi"
+      xmlns:esg="https://example.invalid/esg"
+      xmlns:esg2="https://example.invalid/esg2"
+      xmlns:units="https://example.invalid/units">
+<head><title>SYNTH-01 2026 可持续披露（合成，首报）</title></head>
+<body>
+<ix:header>
+  <ix:resources>
+    <xbrli:context id="c1">
+      <xbrli:entity><xbrli:identifier scheme="urn:issuer">SYNTH-01</xbrli:identifier></xbrli:entity>
+      <xbrli:period><xbrli:instant>2026-12-31</xbrli:instant></xbrli:period>
+    </xbrli:context>
+    <xbrli:context id="c2">
+      <xbrli:entity><xbrli:identifier scheme="urn:issuer">SYNTH-01</xbrli:identifier></xbrli:entity>
+      <xbrli:period><xbrli:startDate>2026-01-01</xbrli:startDate><xbrli:endDate>2026-12-31</xbrli:endDate></xbrli:period>
+    </xbrli:context>
+    <xbrli:context id="c3">
+      <xbrli:entity><xbrli:identifier scheme="urn:issuer">SYNTH-01</xbrli:identifier>
+        <xbrli:segment><xbrldi:explicitMember dimension="esg:ScopeAxis">esg:Scope1</xbrldi:explicitMember></xbrli:segment>
+      </xbrli:entity>
+      <xbrli:period><xbrli:startDate>2026-01-01</xbrli:startDate><xbrli:endDate>2026-12-31</xbrli:endDate></xbrli:period>
+    </xbrli:context>
+    <xbrli:context id="c4">
+      <xbrli:entity><xbrli:identifier scheme="urn:issuer">SYNTH-01</xbrli:identifier>
+        <xbrli:scenario><xbrldi:explicitMember dimension="esg:ScopeAxis">esg:Scope2</xbrldi:explicitMember></xbrli:scenario>
+      </xbrli:entity>
+      <xbrli:period><xbrli:startDate>2026-01-01</xbrli:startDate><xbrli:endDate>2026-12-31</xbrli:endDate></xbrli:period>
+    </xbrli:context>
+    <xbrli:context id="c5">
+      <xbrli:entity><xbrli:identifier scheme="urn:issuer">SYNTH-01</xbrli:identifier>
+        <xbrli:segment><xbrldi:explicitMember dimension="esg:RegionAxis">esg:RegionNorth</xbrldi:explicitMember></xbrli:segment>
+      </xbrli:entity>
+      <xbrli:period><xbrli:startDate>2026-01-01</xbrli:startDate><xbrli:endDate>2026-12-31</xbrli:endDate></xbrli:period>
+    </xbrli:context>
+    <xbrli:unit id="u-tonne"><xbrli:measure>units:tonne</xbrli:measure></xbrli:unit>
+    <xbrli:unit id="u-kgco2e"><xbrli:measure>units:kgCO2e</xbrli:measure></xbrli:unit>
+    <xbrli:unit id="u-tco2e"><xbrli:measure>units:tCO2e</xbrli:measure></xbrli:unit>
+    <xbrli:unit id="u-mwh"><xbrli:measure>units:MWh</xbrli:measure></xbrli:unit>
+    <xbrli:unit id="u-kwh"><xbrli:measure>units:kWh</xbrli:measure></xbrli:unit>
+    <xbrli:unit id="u-count"><xbrli:measure>units:count</xbrli:measure></xbrli:unit>
+    <xbrli:unit id="u-kgmwh">
+      <xbrli:divide>
+        <xbrli:numeratorMeasures>units:kgCO2e</xbrli:numeratorMeasures>
+        <xbrli:denominatorMeasures>units:MWh</xbrli:denominatorMeasures>
+      </xbrli:divide>
+    </xbrli:unit>
+  </ix:resources>
+  <ix:hidden>
+    <ix:nonFraction name="esg:WasteGenerated" contextRef="c2" unitRef="u-tonne" decimals="0" format="ixt:numdotdecimal">120</ix:nonFraction>
+    <ix:nonFraction name="esg:SafetyDrills" contextRef="c2" unitRef="u-count" decimals="0">4</ix:nonFraction>
+  </ix:hidden>
+</ix:header>
+<h1>合成披露：所有企业与数值均为虚构</h1>
+<p>废弃物总量：<ix:nonFraction name="esg:WasteGenerated" contextRef="c2" unitRef="u-tonne" decimals="0" format="ixt:numdotdecimal">120</ix:nonFraction> 吨</p>
+<p>废弃物总量（精确口径）：<ix:nonFraction name="esg:WasteGenerated" contextRef="c2" unitRef="u-tonne" decimals="1">120.0</ix:nonFraction> 吨</p>
+<p>其中北区废弃物：<ix:nonFraction name="esg:WasteGenerated" contextRef="c5" unitRef="u-tonne" decimals="0">45</ix:nonFraction> 吨</p>
+<p>范围一排放：<ix:nonFraction name="esg:Emissions" contextRef="c3" unitRef="u-tco2e" decimals="0" format="ixt:numdotdecimal">4,500</ix:nonFraction> tCO2e</p>
+<p>范围二排放：<ix:nonFraction name="esg:Emissions" contextRef="c4" unitRef="u-kgco2e" decimals="0">38000</ix:nonFraction> kgCO2e</p>
+<p>外购电力：<ix:nonFraction name="esg:Energy" contextRef="c2" unitRef="u-mwh" decimals="0" format="ixt:numdotdecimal">2,500</ix:nonFraction> MWh</p>
+<p>外购电力（抄表口径）：<ix:nonFraction name="esg:Energy" contextRef="c2" unitRef="u-kwh" decimals="-3" scale="3">2500</ix:nonFraction> kWh</p>
+<p>排放强度：<ix:nonFraction name="esg:EmissionIntensity" contextRef="c2" unitRef="u-kgmwh" decimals="1">3320.0</ix:nonFraction> kgCO2e/MWh</p>
+<p>本期减排量：<ix:nonFraction name="esg:EmissionsReduction" contextRef="c2" unitRef="u-tco2e" decimals="0" sign="-">300</ix:nonFraction> tCO2e</p>
+<p>员工人数：<ix:nonFraction name="esg:Workers" contextRef="c1" unitRef="u-count" decimals="0">35</ix:nonFraction> 人</p>
+<p>员工人数（工会口径）：<ix:nonFraction name="esg:Workers" contextRef="c1" unitRef="u-count" decimals="0">36</ix:nonFraction> 人</p>
+<p>安全演练次数：<ix:nonFraction name="esg:SafetyDrills" contextRef="c2" unitRef="u-count" decimals="0">4</ix:nonFraction> 次</p>
+<p>安全政策：<ix:nonNumeric name="esg:SafetyPolicy" contextRef="c1">合成安全政策：所有数据均为虚构。</ix:nonNumeric></p>
+<p>同名异义标签（另一命名空间）：<ix:nonFraction name="esg2:WasteGenerated" contextRef="c2" unitRef="u-tonne" decimals="0">999</ix:nonFraction></p>
+</body>
+</html>

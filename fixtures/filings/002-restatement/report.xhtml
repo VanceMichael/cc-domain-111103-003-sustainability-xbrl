@@ -1,0 +1,38 @@
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ix="http://www.xbrl.org/2013/inlineXBRL"
+      xmlns:xbrli="http://www.xbrl.org/2003/instance"
+      xmlns:xbrldi="http://www.xbrl.org/2006/xbrldi"
+      xmlns:esg="https://example.invalid/esg"
+      xmlns:units="https://example.invalid/units">
+<head><title>SYNTH-01 2026 可持续披露（合成，重述版）</title></head>
+<body>
+<ix:header>
+  <ix:resources>
+    <xbrli:context id="c1">
+      <xbrli:entity><xbrli:identifier scheme="urn:issuer">SYNTH-01</xbrli:identifier></xbrli:entity>
+      <xbrli:period><xbrli:instant>2026-12-31</xbrli:instant></xbrli:period>
+    </xbrli:context>
+    <xbrli:context id="c2">
+      <xbrli:entity><xbrli:identifier scheme="urn:issuer">SYNTH-01</xbrli:identifier></xbrli:entity>
+      <xbrli:period><xbrli:startDate>2026-01-01</xbrli:startDate><xbrli:endDate>2026-12-31</xbrli:endDate></xbrli:period>
+    </xbrli:context>
+    <xbrli:context id="c3">
+      <xbrli:entity><xbrli:identifier scheme="urn:issuer">SYNTH-01</xbrli:identifier>
+        <xbrli:segment><xbrldi:explicitMember dimension="esg:ScopeAxis">esg:Scope1</xbrldi:explicitMember></xbrli:segment>
+      </xbrli:entity>
+      <xbrli:period><xbrli:startDate>2026-01-01</xbrli:startDate><xbrli:endDate>2026-12-31</xbrli:endDate></xbrli:period>
+    </xbrli:context>
+    <xbrli:unit id="u-tonne"><xbrli:measure>units:tonne</xbrli:measure></xbrli:unit>
+    <xbrli:unit id="u-tco2e"><xbrli:measure>units:tCO2e</xbrli:measure></xbrli:unit>
+    <xbrli:unit id="u-mwh"><xbrli:measure>units:MWh</xbrli:measure></xbrli:unit>
+    <xbrli:unit id="u-count"><xbrli:measure>units:count</xbrli:measure></xbrli:unit>
+  </ix:resources>
+</ix:header>
+<h1>合成披露：重述版，更正废弃物与员工人数</h1>
+<p>废弃物总量（重述）：<ix:nonFraction name="esg:Waste" contextRef="c2" unitRef="u-tonne" decimals="0">135</ix:nonFraction> 吨</p>
+<p>员工人数（重述）：<ix:nonFraction name="esg:Workers" contextRef="c1" unitRef="u-count" decimals="0">36</ix:nonFraction> 人</p>
+<p>范围一排放：<ix:nonFraction name="esg:Emissions" contextRef="c3" unitRef="u-tco2e" decimals="0" format="ixt:numdotdecimal">4,500</ix:nonFraction> tCO2e</p>
+<p>外购电力：<ix:nonFraction name="esg:Energy" contextRef="c2" unitRef="u-mwh" decimals="0" format="ixt:numdotdecimal">2,500</ix:nonFraction> MWh</p>
+<p>安全政策：<ix:nonNumeric name="esg:SafetyPolicy" contextRef="c1">合成安全政策：所有数据均为虚构。（重述版补充说明）</ix:nonNumeric></p>
+</body>
+</html>

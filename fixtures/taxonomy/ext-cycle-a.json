@@ -1,0 +1,11 @@
+{
+  "version": "ext-cycle-a",
+  "namespace": "https://example.invalid/esg",
+  "issued": "2026-03-01",
+  "extends": ["ext-cycle-b"],
+  "concepts": {
+    "Alpha": {"ref": "Beta"}
+  },
+  "aliases": {},
+  "units": {}
+}

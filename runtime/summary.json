@@ -1,0 +1,154 @@
+{
+  "filings": [
+    "f-001",
+    "f-002",
+    "f-003"
+  ],
+  "taxonomy_problems": {
+    "2026-synthetic": [],
+    "base-2025": [],
+    "base-2026": [],
+    "ext-acme-2026": [],
+    "ext-cycle-a": [
+      "概念 ref 环: Beta → Alpha → Beta"
+    ],
+    "ext-cycle-b": [
+      "概念 ref 环: Beta → Alpha → Beta"
+    ],
+    "ext-missing": [
+      "extends 引用的 taxonomy 缺失: ext-ghost，该边已忽略",
+      "概念 Orphan: ref 引用的概念未定义: NoSuchConcept",
+      "别名 Ghost → AlsoMissing 的目标未定义，该映射已标记为断链"
+    ]
+  },
+  "diff_f001_f002": [
+    {
+      "key": "{https://example.invalid/esg}EmissionIntensity",
+      "status": "removed",
+      "delta": null,
+      "note": ""
+    },
+    {
+      "key": "{https://example.invalid/esg}Emissions",
+      "status": "unchanged",
+      "delta": null,
+      "note": ""
+    },
+    {
+      "key": "{https://example.invalid/esg}Emissions",
+      "status": "removed",
+      "delta": null,
+      "note": ""
+    },
+    {
+      "key": "{https://example.invalid/esg}EmissionsReduction",
+      "status": "removed",
+      "delta": null,
+      "note": ""
+    },
+    {
+      "key": "{https://example.invalid/esg}Energy",
+      "status": "unchanged",
+      "delta": null,
+      "note": ""
+    },
+    {
+      "key": "{https://example.invalid/esg}SafetyDrills",
+      "status": "removed",
+      "delta": null,
+      "note": ""
+    },
+    {
+      "key": "{https://example.invalid/esg}SafetyPolicy",
+      "status": "changed",
+      "delta": null,
+      "note": "文本变化: '合成安全政策：所有数据均为虚构。' → '合成安全政策：所有数据均为虚构。（重述版补充说明）'"
+    },
+    {
+      "key": "{https://example.invalid/esg}Waste",
+      "status": "changed",
+      "delta": "15.0",
+      "note": ""
+    },
+    {
+      "key": "{https://example.invalid/esg}Waste",
+      "status": "removed",
+      "delta": null,
+      "note": ""
+    },
+    {
+      "key": "{https://example.invalid/esg}Workers",
+      "status": "changed",
+      "delta": null,
+      "note": "至少一侧存在未决冲突，无法自动比较"
+    },
+    {
+      "key": "{https://example.invalid/esg2}WasteGenerated",
+      "status": "removed",
+      "delta": null,
+      "note": ""
+    }
+  ],
+  "projection_view_2026": [
+    {
+      "from": "WasteGenerated",
+      "to": "Waste",
+      "status": "ok"
+    },
+    {
+      "from": "SafetyDrills",
+      "to": "SafetyDrills",
+      "status": "unchanged"
+    },
+    {
+      "from": "WasteGenerated",
+      "to": "Waste",
+      "status": "ok"
+    },
+    {
+      "from": "Emissions",
+      "to": "Emissions",
+      "status": "unchanged"
+    },
+    {
+      "from": "Emissions",
+      "to": "Emissions",
+      "status": "unchanged"
+    },
+    {
+      "from": "Energy",
+      "to": "Energy",
+      "status": "unchanged"
+    },
+    {
+      "from": "EmissionIntensity",
+      "to": "EmissionIntensity",
+      "status": "unchanged"
+    },
+    {
+      "from": "EmissionsReduction",
+      "to": "EmissionsReduction",
+      "status": "unchanged"
+    },
+    {
+      "from": "Workers",
+      "to": "Workers",
+      "status": "unchanged"
+    },
+    {
+      "from": "SafetyPolicy",
+      "to": "SafetyPolicy",
+      "status": "unchanged"
+    },
+    {
+      "from": "{https://example.invalid/esg2}WasteGenerated",
+      "to": null,
+      "status": "foreign"
+    },
+    {
+      "from": "Waste",
+      "to": "Waste",
+      "status": "unchanged"
+    }
+  ]
+}

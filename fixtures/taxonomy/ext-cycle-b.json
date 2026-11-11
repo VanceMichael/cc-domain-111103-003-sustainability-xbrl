@@ -1,0 +1,12 @@
+{
+  "version": "ext-cycle-b",
+  "namespace": "https://example.invalid/esg",
+  "issued": "2026-03-01",
+  "extends": ["ext-cycle-a"],
+  "concepts": {
+    "Beta": {"ref": "Alpha"},
+    "Gamma": {"dimension": "mass", "datatype": "massItemType", "period_type": "duration"}
+  },
+  "aliases": {},
+  "units": {}
+}

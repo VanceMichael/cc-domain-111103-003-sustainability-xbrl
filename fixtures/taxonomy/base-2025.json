@@ -1,0 +1,18 @@
+{
+  "version": "base-2025",
+  "namespace": "https://example.invalid/esg",
+  "issued": "2025-01-01",
+  "extends": [],
+  "concepts": {
+    "WasteGenerated": {"dimension": "mass", "datatype": "massItemType", "period_type": "duration"},
+    "Emissions": {"dimension": "mass_co2e", "datatype": "massItemType", "period_type": "duration"},
+    "EmissionsReduction": {"dimension": "mass_co2e", "datatype": "massItemType", "period_type": "duration"},
+    "EmissionIntensity": {"dimension": "mass_co2e_per_energy", "datatype": "perUnitItemType", "period_type": "duration"},
+    "Energy": {"dimension": "energy", "datatype": "energyItemType", "period_type": "duration"},
+    "Workers": {"dimension": "count", "datatype": "decimalItemType", "period_type": "instant"},
+    "SafetyDrills": {"dimension": "count", "datatype": "decimalItemType", "period_type": "duration"},
+    "SafetyPolicy": {"dimension": null, "datatype": "textBlockItemType", "period_type": "duration"}
+  },
+  "aliases": {},
+  "units": {}
+}
