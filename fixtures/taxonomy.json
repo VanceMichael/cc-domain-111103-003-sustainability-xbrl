@@ -1,0 +1,11 @@
+{
+  "version": "2026-synthetic",
+  "concepts": {
+    "Waste": "mass",
+    "Emissions": "mass",
+    "Workers": "count"
+  },
+  "aliases": {
+    "WasteGenerated": "Waste"
+  }
+}
